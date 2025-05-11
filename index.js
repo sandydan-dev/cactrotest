@@ -10,7 +10,7 @@ connectDB()
   .catch((err) => console.log(err));
 
 
-const spotifyRoutes = require('./routes/spotify.routes');
+const spotifyRoutes = require('./routes/spotifyRoutes');
 
 app.use(cors());
 app.use(express.json());

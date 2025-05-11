@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const spotifyController = require('../controllers/spotify.controller');
+const spotifyController = require('../controller/spotify.controller');
 
 // Routes
 router.get('/login', spotifyController.login);
