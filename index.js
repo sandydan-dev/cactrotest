@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // routes
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! from Cactro");
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
