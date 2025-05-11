@@ -9,6 +9,9 @@ connectDB()
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 
+
+const spotifyRoutes = require('./routes/spotify.routes');
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,5 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.send("Hello World! from Cactro");
 });
+
+
+app.use('/spotify', spotifyRoutes);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
